@@ -6,13 +6,18 @@
   "author": "Elias_Dias <eliasdiasdearaujo2@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon --exec babel-node src/index.js"
   },
   "dependencies": {
     "apollo-server": "^3.6.3",
-    "graphql": "^16.3.0"
+    "graphql": "^16.3.0",
+    "mongoose": "^6.2.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
     "nodemon": "^2.0.15"
   }
 }
