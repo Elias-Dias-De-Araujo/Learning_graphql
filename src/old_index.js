@@ -9,14 +9,14 @@ const { ApolloServer, gql } = require('apollo-server');
 
 const typeDefs = gql`
     type User {
-        id: ID!,
+        _id: ID!,
         name: String!,
         email: String!,
         active: Boolean!,
     }
 
     type Post {
-        id: ID!,
+        _id: ID!,
         title: String!,
         content: String!,
         author: User!,
@@ -38,19 +38,19 @@ const typeDefs = gql`
 
 const users = [
     {
-        id: String(Math.random()),
+        _id: String(Math.random()),
         name: 'Elias',
         email: 'Elias@teste.com',
         active: true
     },
     {
-        id: String(Math.random()),
+        _id: String(Math.random()),
         name: 'Rafael',
         email: 'Rafael@teste.com',
         active: false
     },
     {
-        id: String(Math.random()),
+        _id: String(Math.random()),
         name: 'Islanio',
         email: 'Islanio@teste.com',
         active: true
@@ -68,7 +68,7 @@ const resolvers = {
     Mutation: {
         createUser: (_, args) => {
             const newUser = {
-                id: String(Math.random()),
+                _id: String(Math.random()),
                 name: args.name,
                 email: args.email,
                 active: true,
